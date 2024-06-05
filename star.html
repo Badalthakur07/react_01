@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+       div{
+        width: 30px;
+        height: 30px;
+        border: 2px solid black;
+        margin: 10px;
+        
+       }
+       .active{
+       background:  gold;
+       width: 200px;
+       }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script type="text/javascript">
+       let btn = document.querySelectorAll('div')
+    btn.forEach((box, index1)=>{
+    box.addEventListener('click',(e)=>{
+    console.log('hello')
+      btn.forEach((star,index)=>{
+        if(index1 >= index){
+     console.log('hello')
+    star.classList.add('active')
+ }else{
+     star.classList.remove('active')
+ }
+      })
+
+
+  
+
+
+// if(index1 >= index2){
+//     console.log('hello')
+//     btn.classList.add('active')
+// }else{
+//     // btn.classList.remove('active')
+
+// }
+ })
+})
+    </script>
+</body>
+</html>
